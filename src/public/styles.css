@@ -1,0 +1,110 @@
+body {
+  margin:0;
+}
+
+p {
+  font-size: 10px;
+}
+
+#vid {
+  margin: 0!important;
+}
+
+/* Background video styling */
+#background-video {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* Carousel container */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30vh;
+}
+
+/* Carousel track */
+.carousel-track {
+  display: flex;
+  will-change: transform;
+  animation: scroll 200s linear infinite;  /* No default duration set here */
+}
+
+/* Image styling */
+.carousel-image {
+  width: auto; /* Adjust the size of each image */
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Infinite marquee scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+
+#infinite-scroll-gallery {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin-top:40vh;
+}
+
+#infinite-scroll-gallery a {
+  margin-right: 0px;
+}
+
+#infinite-scroll-gallery img {
+  max-width: auto; /* Adjust as needed */
+  height: 60vh;
+}
+
+.head-banner {
+  margin:0 ;
+  height: 4rem;
+  /* background-color: yellow; */
+  font-style: italic;
+}
+
+#tien-ich-container {
+  width: 100vw;
+  position: relative; /* Establishes a positioning context */
+}
+
+#tien-ich-inner {
+  column-count: 10;
+  column-gap: 1rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /* column-width: 20vw; */
+  height: 100vh; /* Match the viewport height */
+  break-inside: avoid;
+}
+
+#tien-ich-inner p {
+  break-inside: avoid; /* Prevent items from splitting across columns */
+  margin-bottom: 0; /* Add spacing between entries */
+}
+
+#search-tien-ich {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the form */
+  z-index: 2; /* Layer above the background */
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9); /* Optional: Add a light background for contrast */
+  padding: 1rem;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
